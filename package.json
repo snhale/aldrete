@@ -2,7 +2,6 @@
   "scripts": {
   "build": "npm-run-build"
   },
-  {
   "dependencies": {
     "react": "^19.1.0"
   }
