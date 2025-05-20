@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+    <div id="pg">
+        <H1>Aldrete BP Calculation</H1><br>
+        <p1>Insert patient systolic blood pressures to get aldrete score</p1>
+        <br><br>
+        <p2>
+            <form>
+                <input type="number" min="0" id="baseline" placeholder="Insert baseline SBP here">
+                <Br><br>
+                <input type= "number" min="0" id="current" placeholder="Insert current SBP here">
+                <br><br>
+                <Button onclick="validateform();myfunction()">submit</Button>
+            </form>
+        </p2>
+    <script>
+        function validateform(){
+            let prean= document.getElementById("baseline").value;
+            let postan= document.getElementById("current").value;
+
+            if(prean=="" || prean<0) {
+                document.getElementById("pg").innerHTML="invalid input";
+                
+            }
+
+            if(postan=="" || prean<0) {
+                document.getElementById("pg").innerHTML= "invalid input";
+                
+            }
+        }
+        
+
+        function myfunction(){
+            let x= document.getElementById("baseline").value;
+            let y= document.getElementById("current").value;
+            let z= 1-(y/x).toFixed(2);
+            let w= Math.abs(z);
+
+            if (w>=0 && w<=0.2){document.getElementById("pg").innerHTML="circulation aldrete score is 2";}
+            else if (w>0.2 && w<0.5) {document.getElementById("pg").innerHTML="circulation aldrete score is 1";}
+            else {document.getElementById("pg").innerHTML="circulation aldrete score is 0";}
+        }
+    </script>
+    </div>
+    </body>
+</html>
