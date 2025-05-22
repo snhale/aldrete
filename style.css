@@ -1,0 +1,40 @@
+
+
+#pg {
+    
+    text-align: center;
+    font-size: large;
+   
+}
+
+body {
+    background-color: rgb(101, 208, 244);
+}
+
+h1 {
+    text-align: center;
+}
+
+p1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+input {
+    width: 180;
+    height: 25px;
+    border-style: double; border-width: 2px;
+    font-size: 15px;
+}
+
+
+
+button {
+    background-color: white;
+    font-size: 15px;
+}
+
+button:active {
+    background-color: grey;
+}
+
